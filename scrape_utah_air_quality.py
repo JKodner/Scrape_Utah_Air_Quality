@@ -51,7 +51,7 @@ for i in web_keys.keys():
     color = tuple(map(int, numbers))
     status = colors[color]
 
-    print col.format("Current %s County Air Quality: <%s>%s</%s>(%s) as of %s. PM2.5: %s\n" % 
+    print col.format("Current %s Air Quality: <%s>%s</%s> (%s) as of %s. PM2.5: %s\n" % 
     	(web_keys[i]["name"], colors[color]["tag"], colors[color]["color"], 
     		colors[color]["tag"], colors[color]["condition"], date, pm25))
     sleep(0.5)
