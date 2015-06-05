@@ -29,7 +29,7 @@ colors = {
 }
 
 for i in web_keys.keys():
-    request = Request("http://www.airquality.utah.gov/aqp/currentconditions.php?id=%s" % i)
+    request = Request("http://air.utah.gov/currentconditions.php?id=%s" % i)
     soup = BeautifulSoup(urlopen(request).read())
     lst = soup.findAll('div', {"class": "pm25"})[0]
     pm25 = lst.contents[2].strip()
